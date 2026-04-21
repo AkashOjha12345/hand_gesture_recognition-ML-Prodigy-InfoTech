@@ -16,9 +16,9 @@ from src.preprocess import (
 
 
 def load_artifacts(models_dir: str | Path | None = None, data_dir: str | Path | None = None):
-    model_root = Path(models_dir or default_models_dir()).resolve() / "artifacts"
-    model = tf.keras.models.load_model(model_root / "food_model.keras")
-    classes = load_class_names(model_root / "food_classes.txt")
+    model_root = Path(models_dir or default_models_dir()).resolve()
+    model = tf.keras.models.load_model(model_root / "gesture_model.h5")
+    classes = load_class_names(model_root / "classes.txt")
     calorie_map = load_calorie_map(data_dir or default_data_dir())
     return model, classes, calorie_map
 

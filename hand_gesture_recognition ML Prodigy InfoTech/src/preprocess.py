@@ -3,7 +3,7 @@ from pathlib import Path
 
 import tensorflow as tf
 
-IMG_SIZE = 224
+IMG_SIZE = 64
 AUTOTUNE = tf.data.AUTOTUNE
 DEFAULT_CALORIES = 320
 
